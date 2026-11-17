@@ -1,6 +1,16 @@
 def non_winners(races):
-    # Write your solution here!
-    pass
+    winners = set()
+    drivers = set()
+
+    for podium in races.values():
+        drivers.add(podium[0])
+        drivers.add(podium[1])
+        drivers.add(podium[2])
+
+        winners.add(podium[0])
+
+    return drivers - winners
+
 
 
 races_1 = {
